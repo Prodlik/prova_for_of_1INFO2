@@ -7,4 +7,19 @@ Ou seja, são duas entradas fornecidas pelos usuários (dois prompts).
 Calcule a média de temperaturas que estão no Array e apresente para o usuário qual foi a média calculada.
     */
 
+    let temperaturas = [25.5, 27.0, 24.8, 28.1, 29.3, 26.5, 25.9];
+    const temperaturaOntem = Number(prompt(`Informe a temperatura de ontem`));
+    const temperaturaAnteOntem = Number(prompt(`Informe a temperatura de anteontem`));
+    temperaturas.push(temperaturaOntem);
+    temperaturas.push(temperaturaAnteOntem);
+    let temperatura = 0;
+    let temperaturaNum = 0;
+
+    for(let temp of temperaturas) {
+        temperatura = temperatura + temp;
+        temperaturaNum = temperaturaNum + 1;
+    };
+
+    document.write(`a média calculada é ${temperatura / temperaturaNum}`);
+
 </script>

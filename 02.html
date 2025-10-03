@@ -6,5 +6,15 @@ Peça para o usuário informar o endereço de e-mail que possui e, após o usuá
 Usando for...of, crie um novo array contendo apenas os e-mails que são considerados "válidos" (para este exercício, um e-mail válido é aquele que contém o caractere "@").
 Exiba a lista de e-mails válidos.
     */
+let email = ["contato@site.com", "user.g", "aluno@escola.org", "teste"];
+const seuEmail = prompt(`Informe seu email`);
+email.push(seuEmail);
+let validos = [];
 
+for(let mail of email) {
+    if(mail.search("@") > -1) {
+        validos.push(mail);
+    } 
+}
+document.write(`Os email válidos são ${validos.join(" - ")}`);
 </script>
