@@ -6,5 +6,16 @@ catalogo = [89.90, 750.00, 1200.50, 40.00];
 Você deve perguntar para o usuário qual a porcentagem de aumento e, então, calcular os novos preços dos produtos.
 Apresente para o usuário, no final do programa, a soma de todos os preços que estão no Array.
     */
+    let catalogo = [89.90, 750.00, 1200.50, 40.00];
+    let porcentagemAumento = Number(prompt(`Informe a porcentagem de aumento`));
+    let novoCatalogo = [];
+    let soma = 0;
+
+    for(let novo of catalogo) {
+        let novoPreco = novo+(novo * porcentagemAumento / 100);
+        novoCatalogo.push(novoPreco);
+        soma = soma + novoPreco;
+    }
+    document.write(`os novos preços são ${novoCatalogo.join(" , ")} e a soma é ${soma}`);
 
 </script>
